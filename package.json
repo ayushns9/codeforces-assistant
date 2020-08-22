@@ -1,0 +1,22 @@
+{
+  "name": "codeforces-assistant",
+  "version": "1.0.0",
+  "description": "A Telegram bot to provide various codeforces specific functionalities.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ayushns9/codeforces-assistant.git"
+  },
+  "author": "Ayush Goel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ayushns9/codeforces-assistant/issues"
+  },
+  "homepage": "https://github.com/ayushns9/codeforces-assistant#readme",
+  "dependencies": {
+    "telegraf": "^3.38.0"
+  }
+}
