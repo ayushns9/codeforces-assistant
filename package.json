@@ -18,5 +18,8 @@
   "homepage": "https://github.com/ayushns9/codeforces-assistant#readme",
   "dependencies": {
     "telegraf": "^3.38.0"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0"
   }
 }
