@@ -1,11 +1,14 @@
 /* 
-*Function to handle request
-*for a new challenge
+* Function to handle request
+* for a new challenge
 */
 
+const {StartChallengeText} = require('./Texts')
+
 function setupChallengeInvite(bot) {
+    // reply with the initiate challenge message
     bot.command('challenge', ctx => {
-        ctx.reply('Initiating a new challenge for you! \n Username of opponent?')
+        return ctx.reply(StartChallengeText)
     });
 }
 
