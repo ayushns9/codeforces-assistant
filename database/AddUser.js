@@ -7,10 +7,10 @@ async function AddUser(pool, chat_id, handle) {
     const client = await pool.connect();
     console.log(chat_id, handle)
     try {
-        // const result = await client.query(`SELECT * FROM users`);
+        const result = await client.query(`SELECT * FROM users`);
         var qry = `INSERT INTO public.users(chat_id, handle) VALUES (${chat_id}, '${handle}')`;
         console.log(qry)
-        const result = await client.query(qry);
+        await client.query(qry);
     }
     catch (err) {
         throw err;

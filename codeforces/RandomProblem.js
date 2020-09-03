@@ -1,5 +1,5 @@
 const fetch = require('node-fetch')
-const CheckSolved = require('./CheckSolved')
+const { CheckSolved } = require('./CheckSolved')
 
 async function RandomProblem(rating, user1, user2) {
     const api_url = "https://codeforces.com/api/problemset.problems"
@@ -17,7 +17,7 @@ async function RandomProblem(rating, user1, user2) {
     do {
         RandomIndex = (Math.floor(Math.random() * 1000000000))%problems.length;
         choosen_problem = problems[RandomIndex];
-    }while(await CheckSolved(user1, choosen_problem.contestId, choosen_problem.index) || await CheckSolved(user2, choosen_problem.contestId, choosen_problem.index));
+    }while(await (await CheckSolved(user1, choosen_problem.contestId, choosen_problem.index)).solved || await (await CheckSolved(user2, choosen_problem.contestId, choosen_problem.index)).solved);
     var problem_link = `https://codeforces.com/problemset/problem/${choosen_problem.contestId}/${choosen_problem.index}`
     return "" + problem_link;
 }

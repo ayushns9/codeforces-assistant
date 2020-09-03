@@ -12,7 +12,6 @@ function setupChallengeInvite(bot) {
     });
 }
 
-
 // exports
 module.exports = {
     setupChallengeInvite
