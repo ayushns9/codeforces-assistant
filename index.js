@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 3000;
 const URL = process.env.URL || 'https://codeforces-assistant-telegram.herokuapp.com/';
 
 
-bot.telegram.setWebhook(`${URL}/bot${API_TOKEN}`);
+bot.telegram.setWebhook(`${URL}/bot${process.env.BOT_TOKEN}`);
 
 //Setup bot commands
 setupStart(bot);
